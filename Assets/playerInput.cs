@@ -5,6 +5,7 @@ public class playerInput : MonoBehaviour {
 	private Rigidbody2D body;
 	public float acceleration;
 	public float maxSpeed;
+	public int playerNum;
 	
 	// Use this for initialization
 	void Start () {
@@ -18,7 +19,8 @@ public class playerInput : MonoBehaviour {
 	
 	// All Physics go here
 	void FixedUpdate () {
-		Vector2 movement = new Vector2(Input.GetAxis ("Horizontal"), Input.GetAxis ("Vertical"));
+		Vector2 movement = new Vector2(Input.GetAxis ("Horizontal"+playerNum), Input.GetAxis ("Vertical"+playerNum));
+		movement.Scale (new Vector2 (15, 15));
 		body.AddForce (movement);
 	}
 }
