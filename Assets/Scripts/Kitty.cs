@@ -24,13 +24,19 @@ public class Kitty : MonoBehaviour {
 	}
 
 	void OnTriggerEnter2D(Collider2D other) {
-		if (other.gameObject.CompareTag ("Pickup")) {
-			if (foodCount < 3) {
-				Destroy(other.gameObject);
-				foodCount++;
-				foodMeter.setCount(foodCount);
+		if (foodCount < 3 && other.gameObject.CompareTag ("Pickup")) {
 
-				gameManager.addScore(playerNum);
+			Carryable carryable = other.gameObject.GetComponent<Carryable>();
+			if(!carryable){
+				Debug.LogError("Tried to pickup something not Carryable");
+			}else{
+				if (carryable.getType() == 1) { // kittens shall not eat each other
+					Destroy(other.gameObject);
+					foodCount++;
+					foodMeter.setCount(foodCount);
+
+					gameManager.addScore(playerNum);
+				}
 			}
 		}
 	}

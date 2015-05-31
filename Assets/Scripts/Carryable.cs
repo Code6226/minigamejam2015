@@ -4,6 +4,8 @@ using System.Collections;
 public class Carryable : MonoBehaviour {
 
 	public int carryType = 1;
+	public int isFood = 0; // why doesn't this show?
+
 	// 1 Chicken, 2 P1 Kitty, 3 P2 Kitty
 
 	// Use this for initialization
@@ -13,5 +15,9 @@ public class Carryable : MonoBehaviour {
 
 	public int getType(){
 		return carryType;
+	}
+
+	public bool getIsFood(){
+		return isFood == 1;
 	}
 }
