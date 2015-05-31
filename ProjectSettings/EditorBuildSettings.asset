@@ -9,3 +9,7 @@ EditorBuildSettings:
     path: Assets/Scenes/title.unity
   - enabled: 1
     path: Assets/Scenes/room.unity
+  - enabled: 1
+    path: Assets/Scenes/WinP1.unity
+  - enabled: 1
+    path: Assets/Scenes/WinP2.unity

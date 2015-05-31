@@ -18,8 +18,14 @@ public class GameManager : MonoBehaviour {
 	public void addScore(int playerNum){
 		if (playerNum == 1) {
 			scorePlayerOne++;
+			if(scorePlayerOne >= 9){
+				Application.LoadLevel("WinP1");
+			}
 		} else {
 			scorePlayerTwo++;
+			if(scorePlayerOne >= 9){
+				Application.LoadLevel("WinP2");
+			}
 		}
 	}
 }

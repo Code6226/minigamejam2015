@@ -41,7 +41,7 @@ public class playerInput : MonoBehaviour {
 		}
 
 		//		bool inputGrab = Input.GetButton ("Fire1");
-		inputGrab = ((playerNum == 1 && Input.GetKey (KeyCode.LeftControl)) || (playerNum == 2 && Input.GetKey (KeyCode.RightShift)));
+		inputGrab = Input.GetButton ("Fire" + playerNum) || ((playerNum == 1 && Input.GetKey (KeyCode.LeftControl)) || (playerNum == 2 && Input.GetKey (KeyCode.RightShift)));
 
 	}
 	
