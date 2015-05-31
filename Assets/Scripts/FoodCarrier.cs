@@ -4,6 +4,7 @@ using System.Collections;
 public class FoodCarrier : MonoBehaviour {
 	
 //	private FoodSpawn foodSpawn;
+	public Animator animator;
 
 	private GameObject lastTouchedFood;
 	private GameObject carryingFood;
@@ -13,6 +14,7 @@ public class FoodCarrier : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 //		foodSpawn = GameObject.FindObjectOfType<FoodSpawn> ();
+		animator = GetComponent<Animator> ();
 	}
 	
 	// Update is called once per frame
@@ -35,6 +37,11 @@ public class FoodCarrier : MonoBehaviour {
 		if (isCarrying || !lastTouchedFood) {
 			return;
 		}
+		if (animator) {
+			animator.SetInteger("Carrying", 1);
+			animator.speed = 100;
+			animator.Update(10f);
+		}
 		carryingFood = lastTouchedFood;
 		lastTouchedFood = null;
 
@@ -46,6 +53,11 @@ public class FoodCarrier : MonoBehaviour {
 	public void tryDrop() {
 		if (!isCarrying) {
 			return;
+		}
+		if (animator) {
+			animator.SetInteger("Carrying", 0);
+			animator.speed = 100; // hack to make the transition happen faster ?
+			animator.Update(10f);
 		}
 		carryingFood.transform.position = new Vector2(transform.position.x, transform.position.y);
 

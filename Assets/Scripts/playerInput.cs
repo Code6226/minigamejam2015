@@ -3,14 +3,13 @@ using System.Collections;
 
 public class playerInput : MonoBehaviour {
 	private Rigidbody2D body;
+	public Animator animator;
 //	private CircleCollider2D colliderFood;
 	private FoodCarrier foodCarrier;
 
 	public int playerNum;
 
 	private float deadZone = 0.01f;
-	
-	public Animator animator;
 
 	private float inputX = 0f;
 	private float inputY = 0f;
