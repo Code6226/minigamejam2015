@@ -10,7 +10,7 @@ GameObject:
   - 4: {fileID: 412242}
   - 212: {fileID: 21227742}
   - 58: {fileID: 5810240}
-  - 114: {fileID: 11483980}
+  - 114: {fileID: 11475038}
   m_Layer: 0
   m_Name: FoodChicken
   m_TagString: Pickup
@@ -43,7 +43,7 @@ CircleCollider2D:
   m_Offset: {x: .0399999991, y: 0}
   serializedVersion: 2
   m_Radius: .310000002
---- !u!114 &11483980
+--- !u!114 &11475038
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -55,6 +55,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   carryType: 1
+  isFood: 0
 --- !u!212 &21227742
 SpriteRenderer:
   m_ObjectHideFlags: 1
