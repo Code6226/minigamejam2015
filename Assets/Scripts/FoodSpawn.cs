@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 public class FoodSpawn : MonoBehaviour {
 
@@ -12,11 +13,15 @@ public class FoodSpawn : MonoBehaviour {
 	private int lastSpawn;
 	private System.DateTime epochStart;
 
+//	private List<GameObject> foods;
+
 	// Use this for initialization
 	void Start () { 
-		System.DateTime epochStart = new System.DateTime(1970, 1, 1, 0, 0, 0, System.DateTimeKind.Utc);
+		epochStart = new System.DateTime(1970, 1, 1, 0, 0, 0, System.DateTimeKind.Utc);
 		
-		lastSpawn = (int)(System.DateTime.UtcNow - epochStart).TotalMilliseconds; 
+		lastSpawn = (int)(System.DateTime.UtcNow - epochStart).TotalMilliseconds;
+
+//		foods = new List<GameObject>();
 	}
 	
 	// Update is called once per frame
@@ -25,15 +30,14 @@ public class FoodSpawn : MonoBehaviour {
 		int cur_time = (int)(System.DateTime.UtcNow - epochStart).TotalMilliseconds;
 
 		int spawn = cur_time - lastSpawn;
-		Debug.Log(spawn);
+//		Debug.Log(spawn);
 
 		if (spawn >= frequency) {
 			var pos = new Vector2 (Random.Range (posMinX, posMaxX), Random.Range (posMinY, posMaxY));
-			GameObject prefab = (GameObject)Instantiate (Resources.Load ("FoodA"), pos, transform.rotation);
+			GameObject food = (GameObject)Instantiate (Resources.Load ("FoodA"), pos, transform.rotation);
+//			foods.Add(food);
 
 			lastSpawn = (int)(System.DateTime.UtcNow - epochStart).TotalMilliseconds;
 		}
-
-
 	}
 }
