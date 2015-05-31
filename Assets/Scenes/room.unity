@@ -129,6 +129,50 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b794c5d60379f4c24b8911abb77252c4, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &175650543
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 175650545}
+  - 114: {fileID: 175650544}
+  m_Layer: 0
+  m_Name: FoodSpawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &175650544
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 175650543}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f354cb012f2c46dd88d672fe089fbe3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  frequency: 5000
+  posMaxX: 4.5
+  posMinX: -4.5
+  posMaxY: 3.5
+  posMinY: -3.5
+--- !u!4 &175650545
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 175650543}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -.0199999996, y: -.0399999991, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
 --- !u!1 &179801357
 GameObject:
   m_ObjectHideFlags: 0
@@ -222,7 +266,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 489932, guid: bbe1b93a05e0b440db9692697eb258b0, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: .0199999996
       objectReference: {fileID: 0}
     - target: {fileID: 489932, guid: bbe1b93a05e0b440db9692697eb258b0, type: 2}
       propertyPath: m_LocalPosition.y
