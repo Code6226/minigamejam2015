@@ -41,13 +41,20 @@ public class FoodCarrier : MonoBehaviour {
 		if (isCarrying || !lastTouchedFood) {
 			return;
 		}
-		if (animator) {
-			animator.SetInteger("Carrying", 1);
-			animator.speed = 100;
-			animator.Update(10f);
-		}
+
 		carryingFood = lastTouchedFood;
 		lastTouchedFood = null;
+
+		if (animator) {
+			Carryable carryable = carryingFood.GetComponent<Carryable>();
+			if(!carryable){
+				Debug.LogError("Tried to pickup something not Carryable");
+			}else{
+				animator.SetInteger("Carrying", carryable.getType());
+				animator.speed = 100;
+				animator.Update(10f);
+			}
+		}
 
 		carryingFood.SetActive (false);
 //		Destroy (lastTouchedFood);

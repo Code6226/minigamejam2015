@@ -124,7 +124,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 498068, guid: 02700a0940cc44c02b2815e5cf0c3734, type: 2}
       propertyPath: m_RootOrder
-      value: 10
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 11423044, guid: 02700a0940cc44c02b2815e5cf0c3734, type: 2}
       propertyPath: playerNum
@@ -133,6 +133,10 @@ Prefab:
     - target: {fileID: 100466, guid: 02700a0940cc44c02b2815e5cf0c3734, type: 2}
       propertyPath: m_Name
       value: Kitty 2a
+      objectReference: {fileID: 0}
+    - target: {fileID: 11409504, guid: 02700a0940cc44c02b2815e5cf0c3734, type: 2}
+      propertyPath: carryType
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 02700a0940cc44c02b2815e5cf0c3734, type: 2}
@@ -362,7 +366,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 412242, guid: 52c7c3cfce9844548a13ea23a4b68cf4, type: 2}
       propertyPath: m_RootOrder
-      value: 6
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 52c7c3cfce9844548a13ea23a4b68cf4, type: 2}
@@ -404,7 +408,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 498068, guid: 02700a0940cc44c02b2815e5cf0c3734, type: 2}
       propertyPath: m_RootOrder
-      value: 7
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 11423044, guid: 02700a0940cc44c02b2815e5cf0c3734, type: 2}
       propertyPath: playerNum
@@ -454,7 +458,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 498068, guid: 02700a0940cc44c02b2815e5cf0c3734, type: 2}
       propertyPath: m_RootOrder
-      value: 12
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 100466, guid: 02700a0940cc44c02b2815e5cf0c3734, type: 2}
       propertyPath: m_Name
@@ -463,6 +467,10 @@ Prefab:
     - target: {fileID: 11423044, guid: 02700a0940cc44c02b2815e5cf0c3734, type: 2}
       propertyPath: playerNum
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 11409504, guid: 02700a0940cc44c02b2815e5cf0c3734, type: 2}
+      propertyPath: carryType
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 02700a0940cc44c02b2815e5cf0c3734, type: 2}
@@ -538,7 +546,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 325f3385a8dfc4305adf658f7123b203, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 2c757904f217946969b8403bbae2a656, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -647,7 +655,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 498068, guid: 02700a0940cc44c02b2815e5cf0c3734, type: 2}
       propertyPath: m_RootOrder
-      value: 8
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 100466, guid: 02700a0940cc44c02b2815e5cf0c3734, type: 2}
       propertyPath: m_Name
@@ -863,7 +871,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 498068, guid: 02700a0940cc44c02b2815e5cf0c3734, type: 2}
       propertyPath: m_RootOrder
-      value: 11
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 100466, guid: 02700a0940cc44c02b2815e5cf0c3734, type: 2}
       propertyPath: m_Name
@@ -872,6 +880,10 @@ Prefab:
     - target: {fileID: 11423044, guid: 02700a0940cc44c02b2815e5cf0c3734, type: 2}
       propertyPath: playerNum
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 11409504, guid: 02700a0940cc44c02b2815e5cf0c3734, type: 2}
+      propertyPath: carryType
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 02700a0940cc44c02b2815e5cf0c3734, type: 2}
@@ -913,7 +925,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 498068, guid: 02700a0940cc44c02b2815e5cf0c3734, type: 2}
       propertyPath: m_RootOrder
-      value: 9
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 100466, guid: 02700a0940cc44c02b2815e5cf0c3734, type: 2}
       propertyPath: m_Name
