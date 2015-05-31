@@ -23,13 +23,17 @@ public class FoodCarrier : MonoBehaviour {
 
 	void OnTriggerEnter2D(Collider2D other) {
 		//if (other.gameObject.tCompareTag ("Pick Up"))
-		lastTouchedFood = other.gameObject;
+		if (other.gameObject.CompareTag ("Pickup")) {
+			lastTouchedFood = other.gameObject;
+		}
 	}
 	
 	void OnTriggerExit2D(Collider2D other) {
 		//if (other.gameObject.tCompareTag ("Pick Up"))
-		if (lastTouchedFood == other.gameObject) {
-			lastTouchedFood = null;
+		if (other.gameObject.CompareTag ("Pickup")) {
+			if (lastTouchedFood == other.gameObject) {
+				lastTouchedFood = null;
+			}
 		}
 	}
 
