@@ -165,6 +165,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerNum: 2
+  audioEat: {fileID: 8300000, guid: ce7ead2f34bc24eef95472bbc896aa2b, type: 3}
 --- !u!114 &11470566
 MonoBehaviour:
   m_ObjectHideFlags: 1

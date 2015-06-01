@@ -20,4 +20,8 @@ public class Carryable : MonoBehaviour {
 	public bool getIsFood(){
 		return isFood == 1;
 	}
+
+	public bool getIsKitty(){
+		return carryType == 2 || carryType == 3;
+	}
 }

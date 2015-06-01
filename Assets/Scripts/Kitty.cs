@@ -38,6 +38,8 @@ public class Kitty : MonoBehaviour {
 					Destroy(other.gameObject);
 					foodCount++;
 					foodMeter.setCount(foodCount);
+					// More massive kitty!
+					GetComponent<Rigidbody2D>().mass = foodCount * 2f;
 
 					gameManager.addScore(playerNum);
 				}

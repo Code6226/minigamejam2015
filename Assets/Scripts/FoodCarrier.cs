@@ -3,6 +3,9 @@ using System.Collections;
 
 public class FoodCarrier : MonoBehaviour {
 
+	public AudioClip audioGrab;
+	public AudioClip audioGrabKitty;
+
 //	private FoodSpawn foodSpawn;
 	private Animator animator;
 	private Rigidbody2D body;
@@ -53,10 +56,13 @@ public class FoodCarrier : MonoBehaviour {
 				Debug.LogError("Tried to pickup something not Carryable");
 			}else{
 				animator.SetInteger("Carrying", carryable.getType());
-//				animator.speed = 100;
-//				animator.Update(10f);
+				if(carryable.getIsKitty()){
+				   AudioSource.PlayClipAtPoint (audioGrabKitty, Vector3.zero);
+					body.mass += carryingFood.GetComponent<Rigidbody2D>().mass;
+				}
 			}
 		}
+		AudioSource.PlayClipAtPoint (audioGrab, Vector3.zero);
 
 		carryingFood.SetActive (false);
 //		Destroy (lastTouchedFood);
@@ -72,6 +78,8 @@ public class FoodCarrier : MonoBehaviour {
 //			animator.speed = 100; // hack to make the transition happen faster ?
 //			animator.Update(10f);
 		}
+		body.mass = 1; // reset after dropping kitties
+
 		// relocate picked up object right in from of myself
 		Vector2 dirVec = body.velocity.normalized * 1.3f; // set length to x unity units
 		carryingFood.transform.position = new Vector2(transform.position.x + dirVec.x, transform.position.y + dirVec.y);

@@ -36,7 +36,7 @@ public class FoodSpawn : MonoBehaviour {
 
 		if (Time.time >= nextSpawn) {
 			var pos = new Vector2 (Random.Range (posMinX, posMaxX), Random.Range (posMinY, posMaxY));
-			GameObject food = (GameObject)Instantiate(foodPrefabs[Random.Range(0, foodPrefabs.Length)], pos, transform.rotation);
+			Instantiate(foodPrefabs[Random.Range(0, foodPrefabs.Length)], pos, transform.rotation); // (GameObject)
 //			foods.Add(food);
 
 			setNextSpawn ();
