@@ -58,6 +58,7 @@ public class playerInput : MonoBehaviour {
 			float angle = Mathf.Atan2 (inputY, inputX) * Mathf.Rad2Deg + 90f;
 
 			transform.localEulerAngles = new Vector3 (0, 0, angle);
+
 		}
 
 		animator.speed = body.velocity.magnitude * 0.25f;

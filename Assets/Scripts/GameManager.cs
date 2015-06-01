@@ -3,12 +3,14 @@ using System.Collections;
 
 public class GameManager : MonoBehaviour {
 
+	public AudioClip audioStart;
+
 	private int scorePlayerOne = 0;
 	private int scorePlayerTwo = 0;
 
 	// Use this for initialization
 	void Start () {
-	
+		AudioSource.PlayClipAtPoint (audioStart, Vector3.zero);
 	}
 
 	void FixedUpdate () {

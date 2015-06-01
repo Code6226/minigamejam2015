@@ -2,9 +2,10 @@
 using System.Collections;
 
 public class FoodCarrier : MonoBehaviour {
-	
+
 //	private FoodSpawn foodSpawn;
-	public Animator animator;
+	private Animator animator;
+	private Rigidbody2D body;
 
 	private GameObject lastTouchedFood;
 	private GameObject carryingFood;
@@ -15,8 +16,9 @@ public class FoodCarrier : MonoBehaviour {
 	void Start () {
 //		foodSpawn = GameObject.FindObjectOfType<FoodSpawn> ();
 		animator = GetComponent<Animator> ();
+		body = GetComponent<Rigidbody2D> ();
 	}
-	
+
 	// Update is called once per frame
 	void FixedUpdate () {
 	}
@@ -27,7 +29,7 @@ public class FoodCarrier : MonoBehaviour {
 			lastTouchedFood = other.gameObject;
 		}
 	}
-	
+
 	void OnTriggerExit2D(Collider2D other) {
 		//if (other.gameObject.tCompareTag ("Pick Up"))
 		if (other.gameObject.CompareTag ("Pickup")) {
@@ -51,8 +53,8 @@ public class FoodCarrier : MonoBehaviour {
 				Debug.LogError("Tried to pickup something not Carryable");
 			}else{
 				animator.SetInteger("Carrying", carryable.getType());
-				animator.speed = 100;
-				animator.Update(10f);
+//				animator.speed = 100;
+//				animator.Update(10f);
 			}
 		}
 
@@ -67,12 +69,16 @@ public class FoodCarrier : MonoBehaviour {
 		}
 		if (animator) {
 			animator.SetInteger("Carrying", 0);
-			animator.speed = 100; // hack to make the transition happen faster ?
-			animator.Update(10f);
+//			animator.speed = 100; // hack to make the transition happen faster ?
+//			animator.Update(10f);
 		}
-		carryingFood.transform.position = new Vector2(transform.position.x, transform.position.y);
-
+		// relocate picked up object right in from of myself
+		Vector2 dirVec = body.velocity.normalized * 1.3f; // set length to x unity units
+		carryingFood.transform.position = new Vector2(transform.position.x + dirVec.x, transform.position.y + dirVec.y);
 		carryingFood.SetActive (true);
+
+		carryingFood.GetComponent<Rigidbody2D> ().velocity = new Vector2 (body.velocity.x, body.velocity.y);
+
 		carryingFood = null;
 		isCarrying = false;
 	}
