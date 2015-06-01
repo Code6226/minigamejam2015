@@ -207,7 +207,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f354cb012f2c46dd88d672fe089fbe3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  frequency: 5000
+  frequency: 5
   posMaxX: 4.5
   posMinX: -4.5
   posMaxY: 3.5

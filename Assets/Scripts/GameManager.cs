@@ -23,7 +23,7 @@ public class GameManager : MonoBehaviour {
 			}
 		} else {
 			scorePlayerTwo++;
-			if(scorePlayerOne >= 9){
+			if(scorePlayerTwo >= 9){
 				Application.LoadLevel("WinP2");
 			}
 		}

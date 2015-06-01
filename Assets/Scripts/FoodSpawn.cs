@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 public class FoodSpawn : MonoBehaviour {
 
-	public int frequency;
+	public float frequency;
 	public float posMaxX;
 	public float posMinX;
 	public float posMaxY;
@@ -12,34 +12,34 @@ public class FoodSpawn : MonoBehaviour {
 
 	public GameObject[] foodPrefabs;
 
-	private int lastSpawn;
+	private float nextSpawn;
 	private System.DateTime epochStart;
+
+	private float someTime;
 
 //	private List<GameObject> foods;
 
 	// Use this for initialization
 	void Start () { 
-		epochStart = new System.DateTime(1970, 1, 1, 0, 0, 0, System.DateTimeKind.Utc);
-		
-		lastSpawn = (int)(System.DateTime.UtcNow - epochStart).TotalMilliseconds;
+		setNextSpawn ();
 
 //		foods = new List<GameObject>();
+	}
+
+	void setNextSpawn(){
+		nextSpawn = Time.time + frequency;
 	}
 	
 	// Update is called once per frame
 	void Update () {
-
-		int cur_time = (int)(System.DateTime.UtcNow - epochStart).TotalMilliseconds;
-
-		int spawn = cur_time - lastSpawn;
 //		Debug.Log(spawn);
 
-		if (spawn >= frequency) {
+		if (Time.time >= nextSpawn) {
 			var pos = new Vector2 (Random.Range (posMinX, posMaxX), Random.Range (posMinY, posMaxY));
 			GameObject food = (GameObject)Instantiate(foodPrefabs[Random.Range(0, foodPrefabs.Length)], pos, transform.rotation);
 //			foods.Add(food);
 
-			lastSpawn = (int)(System.DateTime.UtcNow - epochStart).TotalMilliseconds;
+			setNextSpawn ();
 		}
 	}
 }
