@@ -12,7 +12,7 @@ public class VictoryScreen : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if (Time.time > 3f && (Input.GetButtonDown ("Submit") || Input.GetButton ("Fire1") || Input.GetKey (KeyCode.LeftControl))) {
+		if (Time.time > 3f && (Input.GetButton ("Player1Action") || Input.GetButton ("Player2Action") )) {
 
 			Application.LoadLevel("room");
 		}

@@ -12,7 +12,7 @@ public class mainMenu : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if (Input.GetButtonDown ("Player1Action") || Input.GetButtonDown ("Player2Action")){
+		if (Input.GetButton ("Player1Action") || Input.GetButton ("Player2Action")){
 			//AudioSource.PlayClipAtPoint (audioStart, Vector3.zero);
 
 			Application.LoadLevel("room");

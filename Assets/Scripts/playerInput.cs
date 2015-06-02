@@ -28,24 +28,7 @@ public class playerInput : MonoBehaviour {
 		inputX = Input.GetAxis ("Player" + playerNum + "X");
 		inputY = Input.GetAxis ("Player" + playerNum + "Y");
 
-		/*
-		if ((playerNum == 1 && Input.GetKey ("w")) || (playerNum == 2 && Input.GetKey ("up"))) {
-			inputY = 1f;
-		} else if ((playerNum == 1 && Input.GetKey ("s")) || (playerNum == 2 && Input.GetKey ("down"))) {
-			inputY = -1f;
-		}
-
-
-		if ((playerNum == 1 && Input.GetKey ("a")) || (playerNum == 2 && Input.GetKey ("left"))) {
-			inputX = -1f;
-		} else if ((playerNum == 1 && Input.GetKey ("d")) || (playerNum == 2 && Input.GetKey ("right"))) {
-			inputX = 1f;
-		}
-		*/
-		//		bool inputGrab = Input.GetButton ("Fire1");
 		inputGrab = Input.GetButton ("Player" + playerNum + "Action");
-			//|| ((playerNum == 1 && Input.GetKey (KeyCode.LeftControl)) || (playerNum == 2 && Input.GetKey (KeyCode.RightShift)));
-
 	}
 	
 	// All Physics go here
