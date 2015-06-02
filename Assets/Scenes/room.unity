@@ -207,7 +207,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f354cb012f2c46dd88d672fe089fbe3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  frequency: 5000
+  frequency: 5
   posMaxX: 4.5
   posMinX: -4.5
   posMaxY: 3.5
@@ -237,6 +237,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44ed233bbed24495da2b4f8fa44869a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  audioStart: {fileID: 8300000, guid: e6fde51b360d94679919238863f3eb16, type: 3}
 --- !u!1 &179801357
 GameObject:
   m_ObjectHideFlags: 0
@@ -359,6 +360,10 @@ Prefab:
     - target: {fileID: 412242, guid: 52c7c3cfce9844548a13ea23a4b68cf4, type: 2}
       propertyPath: m_RootOrder
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5827430, guid: 52c7c3cfce9844548a13ea23a4b68cf4, type: 2}
+      propertyPath: m_Radius
+      value: .389999986
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 52c7c3cfce9844548a13ea23a4b68cf4, type: 2}
@@ -914,14 +919,6 @@ Prefab:
     - target: {fileID: 100466, guid: 02700a0940cc44c02b2815e5cf0c3734, type: 2}
       propertyPath: m_Name
       value: Kitty 1a
-      objectReference: {fileID: 0}
-    - target: {fileID: 11423044, guid: 02700a0940cc44c02b2815e5cf0c3734, type: 2}
-      propertyPath: playerNum
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 11409504, guid: 02700a0940cc44c02b2815e5cf0c3734, type: 2}
-      propertyPath: carryType
-      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 02700a0940cc44c02b2815e5cf0c3734, type: 2}

@@ -14,7 +14,7 @@ GameObject:
   - 50: {fileID: 5070840}
   - 114: {fileID: 11489990}
   - 114: {fileID: 11468356}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Player1
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -89,7 +89,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61229d372c47f4fd88158d69964b1769, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animator: {fileID: 0}
+  audioGrab: {fileID: 8300000, guid: e55cbf6a99a2e4bfa9bf0dadd23d6747, type: 3}
+  audioGrabKitty: {fileID: 8300000, guid: a5378c6cf5e174da8a2ab1262ee3927f, type: 3}
 --- !u!114 &11489990
 MonoBehaviour:
   m_ObjectHideFlags: 1
