@@ -600,14 +600,6 @@ Prefab:
       propertyPath: m_Name
       value: Kitty 1b
       objectReference: {fileID: 0}
-    - target: {fileID: 11423044, guid: 02700a0940cc44c02b2815e5cf0c3734, type: 2}
-      propertyPath: playerNum
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 11409504, guid: 02700a0940cc44c02b2815e5cf0c3734, type: 2}
-      propertyPath: carryType
-      value: 3
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 02700a0940cc44c02b2815e5cf0c3734, type: 2}
   m_IsPrefabParent: 0
@@ -865,14 +857,6 @@ Prefab:
     - target: {fileID: 100466, guid: 02700a0940cc44c02b2815e5cf0c3734, type: 2}
       propertyPath: m_Name
       value: Kitty 1c
-      objectReference: {fileID: 0}
-    - target: {fileID: 11423044, guid: 02700a0940cc44c02b2815e5cf0c3734, type: 2}
-      propertyPath: playerNum
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 11409504, guid: 02700a0940cc44c02b2815e5cf0c3734, type: 2}
-      propertyPath: carryType
-      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 02700a0940cc44c02b2815e5cf0c3734, type: 2}
