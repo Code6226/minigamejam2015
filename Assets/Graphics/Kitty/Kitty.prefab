@@ -151,7 +151,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 170d2daa82c014f61b2b173a9079ed15, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  carryType: 3
+  carryType: 2
   isFood: 0
 --- !u!114 &11423044
 MonoBehaviour:
