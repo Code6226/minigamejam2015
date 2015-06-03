@@ -13,8 +13,6 @@ public class FoodCarrier : MonoBehaviour {
 	private GameObject lastTouchedFood;
 	private GameObject carryingFood;
 
-	private bool isCarrying = false;
-
 	// Use this for initialization
 	void Start () {
 //		foodSpawn = GameObject.FindObjectOfType<FoodSpawn> ();
@@ -43,7 +41,7 @@ public class FoodCarrier : MonoBehaviour {
 	}
 
 	public void tryPickup() {
-		if (isCarrying || !lastTouchedFood) {
+		if (carryingFood || !lastTouchedFood) {
 			return;
 		}
 
@@ -66,11 +64,11 @@ public class FoodCarrier : MonoBehaviour {
 
 		carryingFood.SetActive (false);
 //		Destroy (lastTouchedFood);
-		isCarrying = true;
+
 	}
 
 	public void tryDrop() {
-		if (!isCarrying) {
+		if (!carryingFood) {
 			return;
 		}
 		if (animator) {
@@ -88,6 +86,5 @@ public class FoodCarrier : MonoBehaviour {
 		carryingFood.GetComponent<Rigidbody2D> ().velocity = new Vector2 (body.velocity.x, body.velocity.y);
 
 		carryingFood = null;
-		isCarrying = false;
 	}
 }
